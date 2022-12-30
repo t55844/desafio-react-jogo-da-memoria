@@ -1,7 +1,9 @@
+import { JogoDaMemoria } from "./components/JogoDaMemoria"
+
 function App() {
   return (
     <div className="App">
-      Jogo da Memória
+      <JogoDaMemoria />
     </div>
   )
 }

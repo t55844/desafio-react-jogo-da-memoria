@@ -42,3 +42,98 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.jogo-da-memoria {
+  padding: 1rem;
+}
+.jogo-da-memoria__conteudo {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.placar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pontos {
+  padding: 1rem 0;
+}
+
+.cartas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.carta {
+  max-width: 100%;
+  aspect-ratio: 3/4;
+  perspective: 1000px;
+}
+.carta__conteudo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.carta img {
+  max-width: 100%;
+}
+
+.carta:hover .carta__conteudo {
+  transform: rotateY(180deg);
+}
+
+.carta__frente, .carta__costas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.carta__frente {
+  background-color: #bbb;
+}
+
+.carta__costas {
+  transform: rotateY(180deg);
+}
+
+.resultado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.resultado__box {
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: #333;
+  border-radius: 1rem;
+}
+
+.resultado--aberto {
+  opacity: 1;
+  visibility: visible;
+}

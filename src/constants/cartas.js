@@ -1,5 +1,5 @@
 const imagens = [
-  "javascript.js.png",
+  "javascript.png",
   "nextjs.png",
   "nodejs.png",
   "reactjs.png",
@@ -11,3 +11,10 @@ const cartasUnicas = imagens.map((imagem, indice) => ({
   imagem,
   idDaImagem: `${indice + 1}`,
 }));
+
+export const cartasMocadas = [...cartasUnicas, ...cartasUnicas].map(
+  (props, indice) => ({
+    ...props,
+    id: `${indice + 1}`,
+  })
+);
