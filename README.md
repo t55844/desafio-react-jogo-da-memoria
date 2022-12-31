@@ -1,57 +1,49 @@
-# DESAFIO: Jogo da Memória
-Nesse desafio você terá que recriar o clássico jogo da memória, usando a seguinte stack (tecnologias):
+# Jogo da Memória em React
+Esse repositório foi criado para o resolver o seguinte desafio: 
+[DESAFIO REACT: JOGO DA MEMÓRIA](https://github.com/RicardoFredes/desafio-react-jogo-da-memoria/blob/main/README.md)
 
-- JavaScript (ECMA Script)
-- React JS
-- HTML
-- CSS
+Antes de explorar a resolução, recomento que você execute o desafio e depois comparare com a sua resolução. Lembrando que não há uma única forma de solução, portanto aqui eu apenas mostro uma abordagem seguindo boas práticas de código.
 
-## Casos de uso
-Os seguintes requisitos listados abaixo deverão ser respeitados:
+Veja o projeto rodando em produção:
+[JOGO DA MEMÓRIA](https://ricardofredes.github.io/desafio-react-jogo-da-memoria/)
 
-### Requistitos do jogo
-- Apresentar na tela um mínimo de seis (6) pares de imagens (total de 12 imagens)
-- Apenas um jogador deverá participar
-- As imagens deverão ser embaralhadas a cada novo jogo
-- O jogo deverá simular a experiência e seguir as mesmas regras do jogo clássico da memória:
-  - As cartas devem ter duas faces, uma com a imagem e uma neutra
-  - O objetivo do jogo é encontrar os pares de imagens
-  - Só poderão ser reveladas as imagens de duas cartas por vez
-  - Caso as imagens reveladas não correspondam ao mesmo par, as imagens deverão ser ocultadas automaticamente após 2 segundos
-  - Caso as imagens reveladas correspondam ao mesmo par, elas continuam reveladas e o jogo continua
-  - Após todas as cartas serem reveladas o jogo termina
-- O jogo deverá ter um placar que apresente a taxa de acerto em porcentagem: quantidade total de cartas / total de rodadas * 100
-- Com base na taxa de acerto, ao finalizar a partida, um retorno sobre o nível de memória do jogador deverá ser apresentado na tela:
-  - 0% - 25%: Amnésia
-  - 45% - 50%: Esquecido
-  - 50% - 75%: Bom
-  - 75% - 100%: Exelente
-- O jogador poder reiniciar a partida a qualquer momento
+## Sobre as branchs
+Esse projeto foi organizado em fases, ou seja, é possível usar as branchs para começar a partir de um determinado ponto:
 
-## O que será avaliado?
-- Funcionamento e se atendeu os requisitos do desafio
-- Organização do projeto
-- O domínio e o uso adequado das tecnologias
-- Procure não fazer uso de bibliotecas prontas de css e componentes, pois queremos avaliar o seu nível de conhecimento
-- Boas práticas de código
-- Responsividade
-- Documentação
-- Boas práticas de UX
+- main: possui a solução final
+- 01-inicio: setup inicial do projeto
+- 02-leiate: projeto com estilos e componentes principais
+- 03-logica: adiciona as funcionalidades do jogo
+- 04-finalizacao: projeto finalizado adicionando detalhes finais e a lógica de embaralhar as cartas
+- gh-pages: deploy do projeto
 
-## Dicas finais
-Lembre-se que você terá sete (7) dias para entregar o desafio via link no github pessoal e o mesmo não deverá receber novos commits após a entrega.
+## Idioma
+Para fins didádicos, todo o projeto foi feito em português. Recomenda-se fazer o desafio em inglês por ser o padrão de mercado.
 
-Se possível, publique o seu projeto para que possamos testar a interface e funcionalidades antes de entrar no código.
+## Como rodar o projeto
 
-**Boa Sorte!**
+Após clonar o repositório em sua máquina local, entre na pasta do projeto e rode o seguinte comando em seu terminal:
 
-## Desafio Extra
+```bash
+yarn install
 
-- Trocar quantidade de cartas
-- Adicionar limite de rodadas
-- Adicionar tempo
-- Cartas reveladas voltam ao jogo como cartas "bomba". Se duas cartas "bomba" forem encontradas, você perde rodadas (vida)
-- Adicionar combo de pontuação, cada par encontrado em sequência adiciona um multiplicador de pontos
-- Criar fases para um compor um jogo mais completo
-- Adicionar efeitos sonoros
-- Adicionar efeitos visuais
+// ou
+
+npm install
+```
+
+em seguida rode o seguinte comando:
+
+```bash
+yarn dev
+
+// ou
+
+npm run dev
+```
+
+Seu projeto começara a todar na porta 5173:
+
+```bash
+http://localhost:5173/
+```
