@@ -121,6 +121,9 @@ a:hover {
 
 .carta__frente {
   background-color: #bbb;
+  background-image: url("textura.png");
+  background-size: 100%;
+  background-position: center;
 }
 
 .carta__costas {
