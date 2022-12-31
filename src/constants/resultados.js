@@ -1,4 +1,4 @@
-const resultados = [
+export const resultados = [
   {
     titulo: "Excelente",
     imagem: "kitekat-4.png",
