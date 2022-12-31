@@ -7,14 +7,14 @@ const imagens = [
   "vitejs.png",
 ];
 
-const cartasUnicas = imagens.map((imagem, indice) => ({
+const cartasUnicas = imagens.map((imagem, idDoPar) => ({
   imagem,
-  idDaImagem: `${indice + 1}`,
+  idDoPar,
 }));
 
 export const cartasMocadas = [...cartasUnicas, ...cartasUnicas].map(
-  (props, indice) => ({
+  (props, id) => ({
     ...props,
-    id: `${indice + 1}`,
+    id,
   })
 );
