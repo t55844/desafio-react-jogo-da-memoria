@@ -1,6 +1,6 @@
 # Jogo da Memória em React
 Esse repositório foi criado para o resolver o seguinte desafio: 
-[DESAFIO REACT: JOGO DA MEMÓRIA](https://github.com/RicardoFredes/desafio-react-jogo-da-memoria/blob/main/README.md)
+[DESAFIO REACT: JOGO DA MEMÓRIA](https://github.com/RicardoFredes/desafio-react-jogo-da-memoria/blob/main/DESAFIO.md)
 
 Antes de explorar a resolução, recomento que você execute o desafio e depois comparare com a sua resolução. Lembrando que não há uma única forma de solução, portanto aqui eu apenas mostro uma abordagem seguindo boas práticas de código.
 
