@@ -12,11 +12,11 @@ export const Resultado = () => {
   } = useJogoDaMemoria();
 
   const aberto = useMemo(
-    () => cartas.length === idsDosParesEncontrados.length * 2,
+    () => cartas.length > 0 && cartas.length === idsDosParesEncontrados.length * 2,
     [idsDosParesEncontrados.length]
   );
 
-  const taxaDeAcertos = (cartas.length / quantidadeDeCartasViradas) * 100;
+  const taxaDeAcertos = (cartas.length / quantidadeDeCartasViradas ?? 1) * 100;
 
   const resultado = useMemo(
     () => resultados.find(({ min }) => min < taxaDeAcertos),

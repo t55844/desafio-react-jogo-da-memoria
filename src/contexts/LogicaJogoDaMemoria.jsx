@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
-import { cartasMocadas } from "../constants/cartas";
 import { PONTOS, TEMPO_EM_MS } from "../constants/configuracoes";
+import { buscarCartas } from "../services/buscarCartas";
 
 export const LogicaJogoDaMemoriaContext = createContext();
 
@@ -13,13 +13,14 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
     useState(0);
   const [quantidadeDePontos, definirQuantidadeDePontos] = useState(0);
 
-  const iniciarJogo = () => {
+  const iniciarJogo = async () => {
     definirIdsDosParesEncontrados([]);
     definirIdsDasCartasViradas([]);
 
     definirQuantidadeDeCartasViradas(0);
 
-    definirCartas(cartasMocadas);
+    const cartas = await buscarCartas();
+    definirCartas(cartas);
   };
 
   const novaRodada = () => {
@@ -35,6 +36,12 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
   const registrarParEncontrado = (idDoPar) =>
     definirIdsDosParesEncontrados((ids) => [...ids, idDoPar]);
 
+  const compararCartasPorIds = ([primeiroId, segundoId]) => {
+    const idPar1 = cartas.find(({ id }) => id === primeiroId)?.idDoPar;
+    const idPar2 = cartas.find(({ id }) => id === segundoId)?.idDoPar;
+    return idPar1 === idPar2;
+  };
+
   const virarCarta = ({ id, idDoPar }) => {
     contarCartaVirada();
 
@@ -44,10 +51,10 @@ export const LogicaJogoDaMemoriaProvider = ({ children }) => {
 
     const primeiroId = idsDasCartasViradas[0];
     const segundoId = id;
-    definirIdsDasCartasViradas([primeiroId, segundoId]);
+    const ids = [primeiroId, segundoId];
+    definirIdsDasCartasViradas(ids);
 
-    const cartasIguais = cartas[segundoId]?.idDoPar === cartas[primeiroId]?.idDoPar;
-
+    const cartasIguais = compararCartasPorIds(ids);
     if (cartasIguais) {
       marcarPonto();
       registrarParEncontrado(idDoPar);
