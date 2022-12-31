@@ -45,5 +45,5 @@ npm run dev
 Seu projeto começara a todar na porta 5173:
 
 ```bash
-http://localhost:5173/
+http://localhost:5173/desafio-react-jogo-da-memoria/
 ```
