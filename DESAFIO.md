@@ -23,7 +23,7 @@ Os seguintes requisitos listados abaixo deverão ser respeitados:
 - O jogo deverá ter um placar que apresente a taxa de acerto em porcentagem: quantidade total de cartas / total de rodadas * 100
 - Com base na taxa de acerto, ao finalizar a partida, um retorno sobre o nível de memória do jogador deverá ser apresentado na tela:
   - 0% - 25%: Amnésia
-  - 45% - 50%: Esquecido
+  - 25% - 50%: Esquecido
   - 50% - 75%: Bom
   - 75% - 100%: Exelente
 - O jogador poder reiniciar a partida a qualquer momento
