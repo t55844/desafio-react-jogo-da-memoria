@@ -20,6 +20,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -35,9 +36,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -46,6 +49,7 @@ button:focus-visible {
 .jogo-da-memoria {
   padding: 1rem;
 }
+
 .jogo-da-memoria__conteudo {
   max-width: 600px;
   margin: 0 auto;
@@ -68,10 +72,16 @@ button:focus-visible {
 }
 
 .carta {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
   max-width: 100%;
   aspect-ratio: 3/4;
   perspective: 1000px;
+
 }
+
 .carta__conteudo {
   position: relative;
   width: 100%;
@@ -85,11 +95,12 @@ button:focus-visible {
   max-width: 100%;
 }
 
-.carta:hover .carta__conteudo {
+.virar .carta__conteudo {
   transform: rotateY(180deg);
 }
 
-.carta__frente, .carta__costas {
+.carta__frente,
+.carta__costas {
   position: absolute;
   width: 100%;
   height: 100%;

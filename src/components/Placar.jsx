@@ -1,8 +1,14 @@
+import { useContext } from "react"
+import { MyContext } from "./Context"
+
 export const Placar = () => {
+
+  const { pontos, cartasViradas } = useContext(MyContext)
+
   return (
     <div className="placar">
-      <Pontos titulo="Pontos" valor={0} />
-      <Pontos titulo="Cartas viradas" valor={0} />
+      <Pontos titulo="Pontos" valor={pontos} />
+      <Pontos titulo="Cartas viradas" valor={cartasViradas} />
     </div>
   )
 }

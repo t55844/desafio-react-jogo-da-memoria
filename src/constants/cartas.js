@@ -9,7 +9,8 @@ const imagens = [
 
 const cartasUnicas = imagens.map((imagem, indice) => ({
   imagem,
-  idDaImagem: `${indice + 1}`,
+  idDoPar: `${indice + 1}`,
+  classe: ''
 }));
 
 export const cartasMocadas = [...cartasUnicas, ...cartasUnicas].map(
